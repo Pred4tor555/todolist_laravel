@@ -6,5 +6,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/hello', function () {
-    return view('hello', ['title' => 'hello world']);
+    return view('hello', ['title' => 2*5152]);
 });
