@@ -12,6 +12,7 @@
         <td>Наименование</td>
         <td>Категория</td>
         <td>id пользователя</td>
+        <td>Действия</td>
     </thead>
     @foreach ($tasks as $task)
         <tr>
@@ -19,6 +20,10 @@
             <td>{{$task->title}}</td>
             <td>{{$task->category->name}}</td>
             <td>{{$task->user_id}}</td>
+            <td>
+                <a href="{{url('task/edit/'.$task->id)}}">Редактировать</a>
+                <a href="{{url('task/destroy/'.$task->id)}}">Удалить</a>
+            </td>
         </tr>
     @endforeach
 </table>

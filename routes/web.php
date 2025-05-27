@@ -16,9 +16,25 @@ Route::get('/hello', function () {
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/{id}', [CategoryController::class, 'show']);
 
+
+
+Route::get('/task/create', [TaskController::class, 'create']);
+Route::post('/task', [TaskController::class, 'store']);
+
+Route::get('/task/edit/{id}', [TaskController::class, 'edit']);
+Route::post('/task/update/{id}', [TaskController::class, 'update']);
+
 Route::get('/task', [TaskController::class, 'index']);
 Route::get('/task/{id}', [TaskController::class, 'show']);
+
+Route::get('/task/destroy/{id}', [TaskController::class, 'destroy']);
+
+
 
 Route::get('/user/{id}', [UserController::class, 'show']);
 
 Route::get('/achievement/{id}', [AchievementController::class, 'show']);
+
+
+
+
